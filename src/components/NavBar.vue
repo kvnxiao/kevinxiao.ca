@@ -4,7 +4,7 @@
       .navbar-brand
         .navbar-item
           router-link.navbar-item(to="/")
-            h1.title.is-4 kx.
+            h1.title.is-4.has-text-black-ter kx.
         a.navbar-burger.burger(@click="hamburger" :class="{ 'is-active': enabledMobile }" ref="hamburger" role="button" aria-label="menu" aria-expanded="false" data-target="nav-menu")
           span(aria-hidden="true")
           span(aria-hidden="true")
@@ -12,7 +12,6 @@
       #nav-menu.navbar-menu(:class="{ 'is-active': enabledMobile }" ref="navmenu")
         .navbar-end
           router-link.navbar-item(to="/") Home
-          router-link.navbar-item(to="/about") About
           router-link.navbar-item(to="/blog") Blog
 </template>
 
@@ -28,17 +27,17 @@ export default class NavBar extends Vue {
     event.preventDefault()
     this.enabledMobile = !this.enabledMobile
     if (this.enabledMobile) {
-      document.addEventListener("click", this.hideOnClickOutside)
+      document.addEventListener("click", this.hideListener)
     }
   }
 
-  private hideOnClickOutside(event: MouseEvent) {
+  private hideListener(event: MouseEvent) {
     const navmeu = this.$refs.navmenu as HTMLElement
     const hamburger = this.$refs.hamburger as HTMLElement
     const target = event.target
     if (!navmeu.contains(target as Node) && !hamburger.contains(target as Node)) {
       this.enabledMobile = false
-      document.removeEventListener("click", this.hideOnClickOutside)
+      document.removeEventListener("click", this.hideListener)
     }
   }
 }
@@ -47,7 +46,7 @@ export default class NavBar extends Vue {
 <style lang="sass">
 #nav
   .container
-    padding: 1rem 2rem 0 2rem
+    padding: 2rem 2rem 0 2rem
 
   .navbar-menu.is-active
     position: absolute
@@ -56,4 +55,6 @@ export default class NavBar extends Vue {
 
   a
     user-select: none
+    &.router-link-exact-active
+      color: #0A0A0A
 </style>
