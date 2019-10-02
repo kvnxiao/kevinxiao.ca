@@ -23,8 +23,16 @@ export default class App extends Vue {}
 <style lang="sass">
 $tooltip-background-color: #F5F5F5
 
-@import "~bulma/bulma"
+@import "~bulma/sass/utilities/_all.sass"
+@import "~bulma/sass/base/_all.sass"
+@import "~bulma/sass/layout/hero.sass"
+@import "~bulma/sass/layout/section.sass"
+@import "~bulma/sass/components/navbar.sass"
+@import "~bulma/sass/elements/button.sass"
+@import "~bulma/sass/elements/container.sass"
+@import "~bulma/sass/elements/title.sass"
 @import "~bulma-tooltip/src/sass/index.sass"
+
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300')
 
 #app
