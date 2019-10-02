@@ -4,8 +4,10 @@
     p.is-size-2 I'm
       b  Kevin Xiao
       | .
-    p.subtitle I am a software developer.
-    button.button.is-light Explore my work
+    p.subtitle I am a
+      vue-typer(:text="[' software engineer', ' PC enthusiast', 'n avid adventurer', ' foodie']")
+      | .
+    button.button.is-light Explore my projects
     .social
       a.button.is-medium.is-white(href="https://www.linkedin.com/in/kvnxiao/" target="_blank")
         span.icon
@@ -25,10 +27,12 @@
 import Vue from "vue"
 import Component from "vue-class-component"
 import NavBar from "@/components/NavBar.vue"
+import { VueTyper } from "vue-typer"
 
 @Component({
   components: {
     NavBar,
+    VueTyper,
   },
 })
 export default class Home extends Vue {

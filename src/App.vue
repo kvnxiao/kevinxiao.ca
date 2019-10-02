@@ -40,4 +40,7 @@ $tooltip-background-color: #F5F5F5
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   text-align: center
+
+.subtitle .vue-typer .custom.char.typed
+  color: #4A4A4A
 </style>
