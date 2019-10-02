@@ -9,16 +9,16 @@
       | .
     button.button.is-light Explore my projects
     .social
-      a.button.is-medium.is-white(href="https://www.linkedin.com/in/kvnxiao/" target="_blank")
+      a.button.is-medium.is-white(href="https://www.linkedin.com/in/kvnxiao/" target="_blank" aria-label="LinkedIn profile")
         span.icon
           fa(:icon="['fab', 'linkedin-in']")
-      a.button.is-medium.is-white(href="https://github.com/kvnxiao/" target="_blank")
+      a.button.is-medium.is-white(href="https://github.com/kvnxiao/" target="_blank" aria-label="GitHub profile")
         span.icon
           fa(:icon="['fab', 'github-alt']")
-      button.button.is-medium.is-white.tooltip.is-tooltip-bottom(@click="copyDiscord" data-tooltip="alpha;helix#1222 (copy to clipboard)")
+      button.button.is-medium.is-white.tooltip.is-tooltip-bottom(@click="copyDiscord" data-tooltip="alpha;helix#1222 (copy to clipboard)" aria-label="Discord profile")
         span.icon
           fa(:icon="['fab', 'discord']")
-      a.button.is-medium.is-white(href="https://steamcommunity.com/id/kvnxiao/" target="_blank")
+      a.button.is-medium.is-white(href="https://steamcommunity.com/id/kvnxiao/" target="_blank" aria-label="Steam profile")
         span.icon
           fa(:icon="['fab', 'steam-symbol']")
 </template>
