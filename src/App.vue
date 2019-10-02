@@ -33,7 +33,7 @@ $tooltip-background-color: #F5F5F5
 @import "~bulma/sass/elements/title.sass"
 @import "~bulma-tooltip/src/sass/index.sass"
 
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300')
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans")
 
 #app
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif
