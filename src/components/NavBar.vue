@@ -12,7 +12,7 @@
       #nav-menu.navbar-menu(:class="{ 'is-active': enabledMobile }" ref="navmenu")
         .navbar-end
           router-link.navbar-item(to="/") Home
-          router-link.navbar-item(to="/blog") Blog
+          router-link.navbar-item(to="/projects") Projects
 </template>
 
 <script lang="ts">
