@@ -4,8 +4,8 @@
     p.is-size-2 I'm
       b  Kevin Xiao
       | .
-    p.subtitle I am a
-      vue-typer(:text="[' software engineer', ' PC enthusiast', 'n avid adventurer', ' foodie']")
+    p.subtitle I am&nbsp
+      typer(:text="['a software engineer', 'a PC enthusiast', 'an avid adventurer', 'a foodie']")
       | .
     button.button.is-light Explore my projects
     .social
@@ -27,12 +27,12 @@
 import Vue from "vue"
 import Component from "vue-class-component"
 import NavBar from "@/components/NavBar.vue"
-import { VueTyper } from "vue-typer"
+import Typer from "@/components/Typer.vue"
 
 @Component({
   components: {
     NavBar,
-    VueTyper,
+    Typer,
   },
 })
 export default class Home extends Vue {
