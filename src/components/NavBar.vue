@@ -57,4 +57,18 @@ export default class NavBar extends Vue {
     user-select: none
     &.router-link-exact-active
       color: #0A0A0A
+
+  .navbar-menu
+    a
+      border-bottom: 1px solid transparent
+      border-right: none
+      &.router-link-exact-active
+        border-bottom: 1px solid #4A4A4A
+
+  .navbar-menu.is-active
+    a
+      border-right: 1px solid transparent
+      border-bottom: none
+      &.router-link-exact-active
+        border-right: 1px solid #4A4A4A
 </style>
