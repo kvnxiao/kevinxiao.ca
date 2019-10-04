@@ -41,6 +41,6 @@ $tooltip-background-color: #F5F5F5
   -moz-osx-font-smoothing: grayscale
   text-align: center
 
-.subtitle .vue-typer .custom.char.typed
+.subtitle
   color: #4A4A4A
 </style>
