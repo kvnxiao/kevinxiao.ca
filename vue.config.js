@@ -19,6 +19,10 @@ const prerenderOptions = {
   }),
   postProcess(context) {
     context.html = context.html.replace(`id="app"`, `id="app" data-server-rendered="true"`)
+    // Remove typer text in root/home page
+    if (context.route === "/") {
+      context.html = context.html.replace(/class="typer">.*?<span/g, `class="typer"><span`)
+    }
     return context
   },
 }
