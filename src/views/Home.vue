@@ -7,7 +7,7 @@
     p.subtitle I am&nbsp
       typer(:text="['a software engineer', 'a PC enthusiast', 'an avid adventurer', 'a foodie']")
       | .
-    button.button.is-light Explore my projects
+    router-link.button.is-light(to="/projects") Explore my projects
     .social
       a.button.is-medium.is-white(href="https://www.linkedin.com/in/kvnxiao/" aria-label="LinkedIn profile" target="_blank" rel="noopener")
         span.icon
@@ -26,12 +26,10 @@
 <script lang="ts">
 import Vue from "vue"
 import Component from "vue-class-component"
-import NavBar from "@/components/NavBar.vue"
 import Typer from "@/components/Typer.vue"
 
 @Component({
   components: {
-    NavBar,
     Typer,
   },
 })

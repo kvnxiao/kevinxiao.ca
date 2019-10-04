@@ -3,11 +3,14 @@ const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
 const path = require("path")
 const IS_PROD = process.env.NODE_ENV === "production"
 
-// Import routes to prerender
-const routes = ["/", "/projects"]
-
 // For pre-rendering inside Docker
 const isPuppeteerUser = require("os").userInfo().username === "pptruser"
+
+const titles = {
+  "/": "Kevin Xiao - Home",
+  "/projects": "Kevin Xiao - Projects",
+}
+const routes = Object.keys(titles)
 
 // Options for pre-rendering
 const prerenderOptions = {
@@ -18,6 +21,10 @@ const prerenderOptions = {
     headless: true,
   }),
   postProcess(context) {
+    context.html = context.html.replace(
+      /<title>[^<]*<\/title>/i,
+      `<title>${titles[context.route]}</title>`,
+    )
     context.html = context.html.replace(`id="app"`, `id="app" data-server-rendered="true"`)
     // Remove typer text in root/home page
     if (context.route === "/") {
