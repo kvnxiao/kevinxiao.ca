@@ -9,6 +9,7 @@ import Component from "vue-class-component"
 import { Prop } from "vue-property-decorator"
 
 enum State {
+  INIT,
   IDLE,
   TYPING,
   DONE_TYPING,
@@ -37,17 +38,12 @@ export default class Typer extends Vue {
 
   private intervalFunc: number = 0
 
-  private state: State = State.IDLE
+  private state: State = State.INIT
 
   public mounted() {
     this.textIndex = 0
     this.charIndex = 0
-    this.state = State.IDLE
-    for (const t of this.text) {
-      if (!(t.length > 0)) {
-        return
-      }
-    }
+    this.state = State.INIT
     setTimeout(this.startTyping, this.initDelay)
   }
 
