@@ -4,7 +4,7 @@
       .navbar-brand
         .navbar-item
           router-link.navbar-item(to="/")
-            h1.title.is-4.has-text-black-ter kx.
+            .title.is-4.has-text-black-ter kx.
         a.navbar-burger.burger(@click="hamburger" :class="{ 'is-active': enabledMobile }" ref="hamburger" role="button" aria-label="menu" aria-expanded="false" data-target="nav-menu")
           span(aria-hidden="true")
           span(aria-hidden="true")
