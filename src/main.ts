@@ -9,10 +9,13 @@ import {
   faSteamSymbol,
 } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
+import Meta from "vue-meta"
 
 library.add(faGithubAlt, faLinkedinIn, faDiscord, faSteamSymbol)
 
 Vue.component("fa", FontAwesomeIcon)
+
+Vue.use(Meta)
 
 Vue.config.productionTip = false
 

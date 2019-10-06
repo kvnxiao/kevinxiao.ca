@@ -6,11 +6,7 @@ const IS_PROD = process.env.NODE_ENV === "production"
 // For pre-rendering inside Docker
 const isPuppeteerUser = require("os").userInfo().username === "pptruser"
 
-const titles = {
-  "/": "Kevin Xiao - Home",
-  "/projects": "Kevin Xiao - Projects",
-}
-const routes = Object.keys(titles)
+const routes = ["/", "/projects"]
 
 // Options for pre-rendering
 const prerenderOptions = {
@@ -21,10 +17,6 @@ const prerenderOptions = {
     headless: true,
   }),
   postProcess(context) {
-    context.html = context.html.replace(
-      /<title>[^<]*<\/title>/i,
-      `<title>${titles[context.route]}</title>`,
-    )
     context.html = context.html.replace(`id="app"`, `id="app" data-server-rendered="true"`)
     // Remove typer text in root/home page
     if (context.route === "/") {

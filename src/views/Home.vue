@@ -32,6 +32,9 @@ import Typer from "@/components/Typer.vue"
   components: {
     Typer,
   },
+  metaInfo: {
+    title: "Kevin Xiao - Home",
+  },
 })
 export default class Home extends Vue {
   private copyDiscord() {
