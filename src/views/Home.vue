@@ -9,16 +9,16 @@
       | .
     router-link.button.is-light(to="/projects") Explore my projects
     .social
-      a.button.is-medium.is-white(href="https://www.linkedin.com/in/kvnxiao/" aria-label="LinkedIn profile" target="_blank" rel="noopener")
+      a.button.is-medium.is-white.has-tooltip-bottom(href="https://www.linkedin.com/in/kvnxiao/" data-tooltip="LinkedIn" aria-label="LinkedIn profile" target="_blank" rel="noopener")
         span.icon
           fa(:icon="['fab', 'linkedin-in']")
-      a.button.is-medium.is-white(href="https://github.com/kvnxiao/" aria-label="GitHub profile" target="_blank" rel="noopener")
+      a.button.is-medium.is-white.has-tooltip-bottom(href="https://github.com/kvnxiao/" data-tooltip="GitHub" aria-label="GitHub profile" target="_blank" rel="noopener")
         span.icon
           fa(:icon="['fab', 'github-alt']")
-      button.button.is-medium.is-white.tooltip.is-tooltip-bottom(@click="copyDiscord" data-tooltip="alpha;helix#1222 (copy to clipboard)" aria-label="Discord profile")
+      button.button.is-medium.is-white.has-tooltip-bottom(@click="copyDiscord" data-tooltip="alpha;helix#1222 (copy to clipboard)" aria-label="Discord profile")
         span.icon
           fa(:icon="['fab', 'discord']")
-      a.button.is-medium.is-white(href="https://steamcommunity.com/id/kvnxiao/" aria-label="Steam profile" target="_blank" rel="noopener")
+      a.button.is-medium.is-white.has-tooltip-bottom(href="https://steamcommunity.com/id/kvnxiao/" data-tooltip="Steam" aria-label="Steam profile" target="_blank" rel="noopener")
         span.icon
           fa(:icon="['fab', 'steam-symbol']")
 </template>
