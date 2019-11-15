@@ -15,7 +15,7 @@
       a.button.is-medium.is-white.has-tooltip-bottom(href="https://github.com/kvnxiao/" data-tooltip="GitHub" aria-label="GitHub profile" target="_blank" rel="noopener")
         span.icon
           fa(:icon="['fab', 'github-alt']")
-      button.button.is-medium.is-white.has-tooltip-bottom(@click="copyDiscord" data-tooltip="alpha;helix#1222 (copy to clipboard)" aria-label="Discord profile")
+      button.button.is-medium.is-white.has-tooltip-bottom(@click="copyDiscord" data-tooltip="alpha;helix#7777 (copy to clipboard)" aria-label="Discord profile")
         span.icon
           fa(:icon="['fab', 'discord']")
       a.button.is-medium.is-white.has-tooltip-bottom(href="https://steamcommunity.com/id/kvnxiao/" data-tooltip="Steam" aria-label="Steam profile" target="_blank" rel="noopener")
@@ -28,6 +28,8 @@ import Vue from "vue"
 import Component from "vue-class-component"
 import Typer from "@/components/Typer.vue"
 
+const IDENTIFIER = "alpha;helix#7777"
+
 @Component({
   components: {
     Typer,
@@ -39,7 +41,7 @@ import Typer from "@/components/Typer.vue"
 export default class Home extends Vue {
   private copyDiscord() {
     const temp = document.createElement("textarea")
-    temp.value = "alpha;helix#1222"
+    temp.value = IDENTIFIER
     temp.style.width = "0px"
     temp.style.height = "0px"
     document.body.appendChild(temp)
