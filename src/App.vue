@@ -24,6 +24,7 @@ export default class App extends Vue {}
 $tooltip-background-color: #F5F5F5
 
 @import "~bulma/sass/utilities/_all.sass"
+@import "~bulma/sass/helpers/_all.sass"
 @import "~bulma/sass/base/_all.sass"
 @import "~bulma/sass/layout/hero.sass"
 @import "~bulma/sass/layout/section.sass"
